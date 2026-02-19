@@ -8,7 +8,7 @@ register_matplotlib_converters()
 df = pd.read_csv("fcc-forum-pageviews.csv",parse_dates = ["date"], index_col = "date")
 
 # Clean data
-df = da[
+df = df[
     (df["value"] >= da["value"].quantile(0.025)) &
     (df["value"] <= df["value"].quantile(0.975))]
 
